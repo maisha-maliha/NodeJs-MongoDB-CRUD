@@ -1,0 +1,66 @@
+[{
+  "_id": {
+    "$oid": "643bd177168a337982c441ad"
+  },
+  "title": "the alchemist",
+  "author": "paulo",
+  "rating": 10,
+  "genre": [
+    "fictinal",
+    "life",
+    "motivation"
+  ],
+  "review": [
+    {
+      "name": "jhonny",
+      "rev": "its the best"
+    },
+    {
+      "name": "pappa",
+      "rev": "its legend"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "643bd2605e7c6bb587cae8a8"
+  },
+  "title": "the great cats book",
+  "author": "catto",
+  "rating": 9.55,
+  "genre": [
+    "cat",
+    "life",
+    "fantasy"
+  ],
+  "review": [
+    {
+      "name": "meo",
+      "rev": "cat owner here"
+    },
+    {
+      "name": "maoii",
+      "rev": "its good"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "643bd3175e7c6bb587cae8aa"
+  },
+  "title": "not do great book",
+  "author": "not good author",
+  "rating": 6,
+  "genre": [
+    "life",
+    "demon"
+  ],
+  "review": [
+    {
+      "name": "colok",
+      "rev": "so so"
+    },
+    {
+      "name": "jokol",
+      "rev": "so bad"
+    }
+  ]
+}]
