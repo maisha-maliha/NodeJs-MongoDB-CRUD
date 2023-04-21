@@ -33,11 +33,19 @@ data.forEach(item => {
         rmv_btn.setAttribute('name',`${item.id.toString()}`);
         rmv_btn.setAttribute('value','delt');
 
-        let done_btn = document.createElement('button');
+        let done_btn = document.createElement('a');
         let done_img =  document.createElement('img');
         done_img.setAttribute('src', './assets/media/party.png');
         done_btn.appendChild(done_img);
         done_btn.setAttribute('type','submit');
+
+        done_btn.addEventListener('click', ()=>{
+            h2.style = 'text-decoration: line-through';
+            p.style = 'text-decoration: line-through';
+            list_item.style = 'opacity:0.5';
+            edit_btn.style.display = 'none';
+            done_btn.style.display = 'none';
+        });
 
         form.appendChild(edit_btn);
         form.appendChild(done_btn);

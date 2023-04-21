@@ -208,17 +208,21 @@ input:focus{
     font-family: var(--font1);
     border-radius: 15px;
 }
-.item a, .item button{
+.item a:nth-of-type(1), .item button{
     background-color: var(--candlelight);
     border: solid 2px var(--copper-rust);
     box-shadow: var(--copper-rust) -5px 5px;
 }
-.item button:nth-of-type(1){
+.item a:nth-of-type(2){
     background-color: var(--half-baked);
     border: solid 2px var(--astral);
     box-shadow: var(--astral) -5px 5px;
+    position: relative;
+    padding: 10px;
 }
-.item button img{
+.item a:nth-of-type(2) img{
+    position: relative;
+    top: 10px;
     width: 30px;
 }
 .item button:nth-of-type(2){
