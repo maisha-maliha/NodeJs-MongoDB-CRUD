@@ -1,0 +1,19 @@
+[{
+  "_id": {
+    "$oid": "6442b25ce9b7dbbb69bbb5fb"
+  },
+  "title": "Eat Fruits everyday",
+  "content": "Fruits are good for health"
+},{
+  "_id": {
+    "$oid": "6442b27ae9b7dbbb69bbb5fc"
+  },
+  "title": "Walk everyday 40min",
+  "content": "Walking is good for fit body and strong mind"
+},{
+  "_id": {
+    "$oid": "6442ba3b2eb8a00bea803ea5"
+  },
+  "title": "Do Yoga for 20 mins",
+  "content": "stretch for 20 mins. its good for health."
+}]
