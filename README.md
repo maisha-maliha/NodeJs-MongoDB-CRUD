@@ -9,3 +9,6 @@ In this repository I tried to follow a MVC structure.
 
 ## Issues
 The issue that i faced is when i send data with 'POST' i got encrypted data for which my punctions were converted to ASCII codes. So i simply added 'enctype=text/plain'. This in turn simply sent the data in plain text not encrypted. Yes, buffered data that needs to converted toString(). It's simple todoApp so no need for encryption.
+
+## ON PROGRESS..
+The project is not finnished yet. Still need to work on UPDATE and DELETE function.
