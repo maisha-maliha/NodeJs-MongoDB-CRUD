@@ -7,7 +7,6 @@ http.createServer((req, res)=>{
         req.on('data',(chunk)=>{
             let info = chunk.toString();
             senddata.editres(info);
-            console.log(info);
         });
     }
     if(req.url =='/'){
