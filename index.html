@@ -28,13 +28,14 @@
         <div class="makelist">
             <h2>WHAT TO DO? <img src="./assets/media/smiling.png" alt=""></h2>
             <form method="post" action="/" accept-charset="utf-8" enctype="text/plain">
-                <input type="text" name="head" placeholder="What could the title be? Hmm.. :P">
-                <textarea name="body" id="" placeholder="Tell me MORE !!"></textarea>
+                <input type="text" name="head" placeholder="What could the title be? Hmm.. :P" required>
+                <textarea name="body" placeholder="Tell me MORE !!" required></textarea>
                 <button type="submit">Let's Do This !</button>
             </form>
         </div>
     </section>
     <div class="todo_list"></div>
     <script type="module" src="./view/createlist.js"></script>
+    <!-- <script type="module" src="./view/updatelist.js"></script> -->
 </body>
 </html>

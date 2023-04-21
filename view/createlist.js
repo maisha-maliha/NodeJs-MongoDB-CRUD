@@ -1,11 +1,13 @@
 import data from '../view/data.json' assert { type: 'json'};
+// import it from '../view/updatelist.js';
 let count = 0;
 let todo_list = document.getElementsByClassName('todo_list')[0];
 data.forEach(item => {
     if(item.title){
         let list_item = document.createElement('div');
         list_item.className = 'item';
-
+        list_item.id = `${item.id.toString()}`;
+        // it.item(list_item);
         // ========== CLIP IMAGES
         let img_div = document.createElement('div');
         img_div.className = 'img';
@@ -20,7 +22,9 @@ data.forEach(item => {
         p.innerHTML = item.content;
         // ============ FORM ELEMENT
         let form = document.createElement('form');
-        form.setAttribute('method', 'post')
+        form.setAttribute('method', 'post');
+        form.setAttribute('enctype','text/plain')
+
         let edit_btn = document.createElement('button');
         edit_btn.innerHTML = 'EDIT';
         edit_btn.setAttribute('type','submit');
@@ -28,8 +32,8 @@ data.forEach(item => {
         let rmv_btn = document.createElement('button');
         rmv_btn.innerHTML = 'DELTE';
         rmv_btn.setAttribute('type','submit');
-        rmv_btn.setAttribute('name',`'${item.id.toString()}'`);
-        rmv_btn.setAttribute('value','delte');
+        rmv_btn.setAttribute('name',`${item.id.toString()}`);
+        rmv_btn.setAttribute('value','delt');
 
         let done_btn = document.createElement('button');
         let done_img =  document.createElement('img');

@@ -1,12 +1,14 @@
 const http = require('http');
 const fs = require('fs');
-const senddata = require('./model/createitem')
+const crud = require('./model/crudcall');
+// SERVER CREATION
 http.createServer((req, res)=>{
     //console.log(req.method +' ' + req.url);
     if(req.url == '/' && req.method == 'POST'){
         req.on('data',(chunk)=>{
             let info = chunk.toString();
-            senddata.editres(info);
+            crud.crudcall(info);
+            //console.log(info);
         });
     }
     if(req.url =='/'){
@@ -17,6 +19,16 @@ http.createServer((req, res)=>{
     if(req.url == '/assets/style.css'){
         res.writeHead(200,{'Content-Type':'text/css'});
         let data = fs.readFileSync("./assets/style.css", "utf-8");
+        res.end(data);
+    }
+    if(req.url == '/view/createlist.js'){
+        res.writeHead(200,{'Content-Type':'text/javascript'});
+        let data = fs.readFileSync("./view/createlist.js", "utf-8");
+        res.end(data);
+    }
+    if(req.url == '/view/updatelist.js'){
+        res.writeHead(200,{'Content-Type':'text/javascript'});
+        let data = fs.readFileSync("./view/updatelist.js", "utf-8");
         res.end(data);
     }
     if(req.url == '/assets/media/smiling.png'){
@@ -49,9 +61,4 @@ http.createServer((req, res)=>{
         let data = fs.readFileSync("./view/data.json", "utf-8");
         res.end(data);
     }
-    if(req.url == '/view/createlist.js'){
-        res.writeHead(200,{'Content-Type':'text/javascript'});
-        let data = fs.readFileSync("./view/createlist.js", "utf-8");
-        res.end(data);
-    }
-}).listen(3000);
+}).listen(3000); // LISTENING TO PORT 3000

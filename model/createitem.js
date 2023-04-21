@@ -1,9 +1,8 @@
 const database = require('./database.js');
 
-async function editres(reciveddata){
-    //let data = reciveddata.split('&');
-    console.log(reciveddata);
-    let data = reciveddata.split('\r\n');
+async function createlist(received_data){
+    console.log(received_data);
+    let data = received_data.split('\r\n');
     console.log(data);
     let head = data[0].split('head=');
     let body = data[1].split('body=');
@@ -13,4 +12,4 @@ async function editres(reciveddata){
     await database.createitem(head, body);
 }
 
-module.exports = {editres};
+module.exports = {createlist};

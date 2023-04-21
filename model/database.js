@@ -1,4 +1,4 @@
-const { MongoClient } = require("mongodb");
+const { MongoClient, ObjectId } = require("mongodb");
 const fs = require('fs');
 // Replace the uri string with your connection string.
 const uri = "mongodb://0.0.0.0:27017"; // use 0.0.0.0 instead of localhost caz that gave error.
@@ -33,11 +33,21 @@ async function createitem(head, body){
   console.log("item created");
   makejson();
 }
+// UPDATE ITEM IN COLLECTION
+async function updateitem(head,body,id){
+  let coll = await client.db('todo').collection('item');
+  await coll.updateOne( { _id : new ObjectId("${id}")}, {$set : { title: `"${head}"`, content: `"${body}"`}} );
+  console.log("item updated");
+  makejson();
+}
+// REMOVE ITEM FROM COLLECTION
 async function del_item(id){
   let coll = await client.db('todo').collection('item');
-  await coll.deleteOne({_id : `${id}`});
+  console.log(typeof id);
+  await coll.deleteOne({_id: new ObjectId(id)});
   console.log("item deleted");
   makejson();
 }
+
 // run().catch(console.dir);
-module.exports = {createitem};
+module.exports = {createitem, del_item, updateitem};
