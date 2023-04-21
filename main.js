@@ -3,14 +3,13 @@ const fs = require('fs');
 const senddata = require('./model/createitem')
 http.createServer((req, res)=>{
     //console.log(req.method +' ' + req.url);
-
     if(req.url == '/' && req.method == 'POST'){
         req.on('data',(chunk)=>{
             let info = chunk.toString();
             senddata.editres(info);
+            console.log(info);
         });
     }
-
     if(req.url =='/'){
         res.writeHead(200,{'Content-Type':'text/html'});
         let data = fs.readFileSync("index.html", "utf-8");

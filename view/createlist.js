@@ -28,6 +28,8 @@ data.forEach(item => {
         let rmv_btn = document.createElement('button');
         rmv_btn.innerHTML = 'DELTE';
         rmv_btn.setAttribute('type','submit');
+        rmv_btn.setAttribute('name',`'${item.id.toString()}'`);
+        rmv_btn.setAttribute('value','delte');
 
         let done_btn = document.createElement('button');
         let done_img =  document.createElement('img');

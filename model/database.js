@@ -18,7 +18,7 @@ client.connect();
 async function makejson(){
   let coll = await client.db('todo').collection('item').find().toArray();
   let data = `[`;
-  coll.forEach(item => {data += `{ "title": "${item.title}", "content" : "${item.content}" },`;});
+  coll.forEach(item => {data += `{ "title": "${item.title}", "content" : "${item.content}", "id": "${item._id}" },`;});
   data += '{}]';
   fs.writeFile('./view/data.json', data, (err)=>{if(err) throw err});
 }
@@ -33,6 +33,11 @@ async function createitem(head, body){
   console.log("item created");
   makejson();
 }
-
+async function del_item(id){
+  let coll = await client.db('todo').collection('item');
+  await coll.deleteOne({_id : `${id}`});
+  console.log("item deleted");
+  makejson();
+}
 // run().catch(console.dir);
 module.exports = {createitem};
