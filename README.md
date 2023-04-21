@@ -8,7 +8,7 @@ In this repository I tried to follow a MVC structure.
 * Assets folder has all images and CSS.
 * main.js is working here as the controller. main.js is doing all the routing
 ## Demo of the TODOAPP
-![Alt text](https://github.com/maisha-maliha/NodeJs-MongoDB-CRUD/desktop.png "desktop view")
-![Alt text](https://github.com/maisha-maliha/NodeJs-MongoDB-CRUD/mobile.png "mobile view")
+![Alt text](https://github.com/maisha-maliha/NodeJs-MongoDB-CRUD/blob/master/desktop.png "desktop view")
+![Alt text](https://github.com/maisha-maliha/NodeJs-MongoDB-CRUD/blob/master/mobile.png "mobile view")
 ## Issues
 The issue that i faced is when i send data with 'POST' i got encrypted data for which my punctions were converted to ASCII codes. So i simply added 'enctype=text/plain'. This in turn simply sent the data in plain text not encrypted. Yes, buffered data that needs to converted toString(). It's simple todoApp so no need for encryption.
