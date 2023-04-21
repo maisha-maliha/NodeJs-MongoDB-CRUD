@@ -8,7 +8,6 @@ http.createServer((req, res)=>{
         req.on('data',(chunk)=>{
             let info = chunk.toString();
             crud.crudcall(info);
-            //console.log(info);
         });
     }
     if(req.url =='/'){
@@ -24,11 +23,6 @@ http.createServer((req, res)=>{
     if(req.url == '/view/createlist.js'){
         res.writeHead(200,{'Content-Type':'text/javascript'});
         let data = fs.readFileSync("./view/createlist.js", "utf-8");
-        res.end(data);
-    }
-    if(req.url == '/view/updatelist.js'){
-        res.writeHead(200,{'Content-Type':'text/javascript'});
-        let data = fs.readFileSync("./view/updatelist.js", "utf-8");
         res.end(data);
     }
     if(req.url == '/assets/media/smiling.png'){

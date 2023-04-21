@@ -4,5 +4,4 @@ const database = require('./database');
 async function rmvitem(received_data){
     database.del_item(received_data);
 }
-
 module.exports = {rmvitem}

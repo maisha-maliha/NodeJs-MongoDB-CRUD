@@ -40,6 +40,13 @@ h1{
     width: 80%;
     max-width: 600px;
 }
+body > p{
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    background-color: var(--pig-pink);
+    padding: 5px;
+}
 section{
     width: 80%;
     max-width: 500px;
@@ -65,7 +72,7 @@ span{
     background-color: var(--outer-space);
     border-radius: 50%;
 }
-button:hover{
+button:hover, a{
     cursor: pointer;
 }
 span:nth-of-type(2){
@@ -194,19 +201,19 @@ input:focus{
     right: -10px;
     width: 60px;
 }
-.item button {
+.item button,a {
     margin: 1em 0.2em 1.8em;
     padding: 0.3em 0.6em;
     font-size: 1.4em;
     font-family: var(--font1);
     border-radius: 15px;
 }
-.item button:nth-of-type(1){
+.item a, .item button{
     background-color: var(--candlelight);
     border: solid 2px var(--copper-rust);
     box-shadow: var(--copper-rust) -5px 5px;
 }
-.item button:nth-of-type(2){
+.item button:nth-of-type(1){
     background-color: var(--half-baked);
     border: solid 2px var(--astral);
     box-shadow: var(--astral) -5px 5px;
@@ -214,7 +221,7 @@ input:focus{
 .item button img{
     width: 30px;
 }
-.item button:nth-of-type(3){
+.item button:nth-of-type(2){
     background-color: var(--copper-rust);
     border: solid 2px var(--outer-space);
     box-shadow: var(--outer-space) -5px 5px;

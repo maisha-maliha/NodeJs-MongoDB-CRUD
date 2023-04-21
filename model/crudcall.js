@@ -12,7 +12,6 @@ async function crudcall(receieved_data){
         crtitm.createlist(receieved_data);
     }
     if(eqlsplt[0] == 'edithead'){
-        console.log('update');
         updtitm.updateitem(receieved_data);
     }
 }

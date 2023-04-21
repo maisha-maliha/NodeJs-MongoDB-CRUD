@@ -36,14 +36,13 @@ async function createitem(head, body){
 // UPDATE ITEM IN COLLECTION
 async function updateitem(head,body,id){
   let coll = await client.db('todo').collection('item');
-  await coll.updateOne( { _id : new ObjectId("${id}")}, {$set : { title: `"${head}"`, content: `"${body}"`}} );
+  await coll.updateOne( { _id : new ObjectId(id)}, {$set : { title: `${head}`, content: `${body}`}} );
   console.log("item updated");
   makejson();
 }
 // REMOVE ITEM FROM COLLECTION
 async function del_item(id){
   let coll = await client.db('todo').collection('item');
-  console.log(typeof id);
   await coll.deleteOne({_id: new ObjectId(id)});
   console.log("item deleted");
   makejson();
